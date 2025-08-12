@@ -7,6 +7,7 @@ import { LeadForm } from "@/components/souzai/LeadForm";
 import { FloatingWhatsApp } from "@/components/souzai/FloatingWhatsApp";
 import { ExitIntent } from "@/components/souzai/ExitIntent";
 import { AutomationsCarousel } from "@/components/souzai/AutomationsCarousel";
+import { ProjectsCarousel } from "@/components/souzai/ProjectsCarousel";
 import { useEffect } from "react";
 
 const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá%20SouzAI!%20Quero%20uma%20demonstração.";
@@ -86,49 +87,39 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-primary opacity-20 animate-gradient-slow" aria-hidden="true" />
         <img src={hero} alt="Fundo tecnológico em gradiente roxo com glassmorphism" className="absolute inset-0 w-full h-full object-cover" loading="eager" />
         <div className="relative container mx-auto px-6 py-20 md:py-28">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs bg-secondary text-muted-foreground border">
-                <Shield className="w-4 h-4 text-primary" /> Conformidade LGPD • Implantações rápidas em dias
-              </span>
-              <h1 className="mt-5 text-4xl md:text-5xl font-bold leading-tight">
-                <span className="text-gradient-primary">Agentes de IA que vendem e atendem por você — 24/7</span>
-              </h1>
-              <p className="mt-4 text-lg text-muted-foreground max-w-xl">
-                A SouzAI implementa e treina agentes de IA sob medida para captar leads, qualificar, fechar vendas e dar suporte — integrados aos seus canais e CRM.
-              </p>
-              <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                <Button asChild variant="hero">
-                  <a href="#contato">Quero uma demonstração</a>
-                </Button>
-                <Button asChild variant="whatsapp">
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="mr-1" /> Falar no WhatsApp
-                  </a>
-                </Button>
-              </div>
-              <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
-                <span className="uppercase tracking-wide">Integra com</span>
-                <div className="flex items-center gap-3 opacity-90">
-                  <MessageCircle className="text-primary" aria-label="WhatsApp" />
-                  <Instagram className="text-primary" aria-label="Instagram" />
-                  <Mail className="text-primary" aria-label="E-mail" />
-                  <Globe className="text-primary" aria-label="Site" />
-                  <Send className="text-primary" aria-label="CRM" />
-                </div>
-              </div>
-              <div className="mt-4 text-xs text-muted-foreground">
-                Outras opções de headline: “Transforme conversas em receita com agentes de IA treinados para seu negócio” • “Automatize vendas e suporte com IA que fala a língua do seu cliente”.
+          <div className="text-center max-w-4xl mx-auto">
+            <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs bg-secondary text-muted-foreground border">
+              <Shield className="w-4 h-4 text-primary" /> Conformidade LGPD • Implantações rápidas em dias
+            </span>
+            <h1 className="mt-5 text-4xl md:text-6xl font-bold leading-tight">
+              <span className="text-gradient-primary">Agentes de IA que vendem e atendem por você — 24/7</span>
+            </h1>
+            <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto">
+              A SouzAI implementa e treina agentes de IA sob medida para captar leads, qualificar, fechar vendas e dar suporte — integrados aos seus canais e CRM.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild variant="hero" size="lg">
+                <a href="#contato">Quero uma demonstração</a>
+              </Button>
+              <Button asChild variant="whatsapp" size="lg">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-4 w-4" /> Falar no WhatsApp
+                </a>
+              </Button>
+            </div>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
+              <span className="uppercase tracking-wide">Integra com</span>
+              <div className="flex items-center gap-4 opacity-90">
+                <MessageCircle className="w-5 h-5 text-primary" aria-label="WhatsApp" />
+                <Instagram className="w-5 h-5 text-primary" aria-label="Instagram" />
+                <Mail className="w-5 h-5 text-primary" aria-label="E-mail" />
+                <Globe className="w-5 h-5 text-primary" aria-label="Site" />
+                <Send className="w-5 h-5 text-primary" aria-label="CRM" />
               </div>
             </div>
-
-            <Card className="glass shadow-soft">
-              <CardContent className="p-6">
-                <h2 className="font-heading text-xl mb-2">Comece agora</h2>
-                <p className="text-sm text-muted-foreground mb-4">Receba um diagnóstico gratuito e um plano claro para o seu funil.</p>
-                <LeadForm id="contato" />
-              </CardContent>
-            </Card>
+            <div className="mt-6 text-xs text-muted-foreground max-w-2xl mx-auto">
+              Outras opções de headline: "Transforme conversas em receita com agentes de IA treinados para seu negócio" • "Automatize vendas e suporte com IA que fala a língua do seu cliente".
+            </div>
           </div>
         </div>
       </section>
@@ -208,30 +199,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Demo */}
-      <section className="bg-secondary/60 border-y">
-        <div className="container mx-auto px-6 py-16">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h2 className="font-heading text-3xl mb-3">Ver o agente em ação</h2>
-              <p className="text-muted-foreground mb-6">Confira uma simulação de conversa e veja como qualificamos e encaminhamos oportunidades em tempo real.</p>
-              <div className="flex gap-3">
-                <Button variant="hero">Ver o agente em ação</Button>
-                <Button asChild variant="outline">
-                  <a href="#contato">Agendar diagnóstico gratuito</a>
-                </Button>
-              </div>
-            </div>
-            <Card className="glass shadow-soft">
-              <CardContent className="p-6">
-                <div className="h-64 md:h-72 rounded-lg bg-gradient-primary animate-gradient-slow flex items-center justify-center text-primary-foreground">
-                  <span className="font-semibold">Prévia interativa em breve</span>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* Projects Carousel */}
+      <ProjectsCarousel />
 
       {/* Provas sociais */}
       <section id="depoimentos" className="container mx-auto px-6 py-16">
