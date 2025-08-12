@@ -6,6 +6,7 @@ import { Check, MessageCircle, Shield, Zap, Send, Instagram, Globe, Mail, Bot, T
 import { LeadForm } from "@/components/souzai/LeadForm";
 import { FloatingWhatsApp } from "@/components/souzai/FloatingWhatsApp";
 import { ExitIntent } from "@/components/souzai/ExitIntent";
+import { AutomationsCarousel } from "@/components/souzai/AutomationsCarousel";
 import { useEffect } from "react";
 
 const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá%20SouzAI!%20Quero%20uma%20demonstração.";
