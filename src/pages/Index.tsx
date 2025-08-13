@@ -286,6 +286,43 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Cronograma de Implementação */}
+      <section className="bg-secondary/60 border-y">
+        <div className="container mx-auto px-6 py-16">
+          <h2 className="font-heading text-3xl text-center mb-10">Cronograma de implementação</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-6">
+              {[
+                {week: "Semana 1", title: "Descoberta", desc: "Mapeamento dos fluxos, integrações e definição da personalidade do agente"},
+                {week: "Semana 2", title: "Treinamento", desc: "Configuração da base de conhecimento e treinamento com dados do cliente"},
+                {week: "Semana 3", title: "Testes", desc: "Ambiente de homologação, testes A/B e ajustes finos nos prompts"},
+                {week: "Semana 4", title: "Go-live", desc: "Implementação em produção, monitoramento e otimizações iniciais"},
+              ].map((step, idx) => (
+                <div key={step.week} className="relative">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-semibold mx-auto mb-3">
+                      {idx + 1}
+                    </div>
+                    <h3 className="font-heading text-lg mb-2">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-2">{step.week}</p>
+                    <p className="text-sm">{step.desc}</p>
+                  </div>
+                  {idx < 3 && (
+                    <div className="hidden md:block absolute top-6 left-full w-full h-0.5 bg-gradient-to-r from-primary to-primary/30 transform -translate-y-1/2" />
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <p className="text-muted-foreground mb-4">Suporte contínuo e otimizações durante os primeiros 90 dias</p>
+              <Button asChild variant="hero">
+                <a href="#contato">Começar implementação</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section id="faq" className="bg-secondary/60 border-y">
         <div className="container mx-auto px-6 py-16">
@@ -328,6 +365,69 @@ const Index = () => {
               <LeadForm id="contato-rodape" variant="compact" />
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Contato */}
+      <section id="contato" className="bg-secondary/60 border-y">
+        <div className="container mx-auto px-6 py-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-heading text-3xl mb-4">Entre em contato</h2>
+            <p className="text-muted-foreground mb-10">Pronto para transformar seu atendimento com IA? Vamos conversar sobre suas necessidades.</p>
+            
+            <div className="grid md:grid-cols-2 gap-10 items-start">
+              <Card className="shadow-soft">
+                <CardContent className="p-8">
+                  <h3 className="font-heading text-xl mb-6">Solicite uma demonstração</h3>
+                  <LeadForm id="contato-principal" />
+                </CardContent>
+              </Card>
+              
+              <div className="space-y-6">
+                <div className="text-left">
+                  <h3 className="font-heading text-xl mb-4">Outras formas de contato</h3>
+                  <div className="space-y-4">
+                    <Button asChild variant="whatsapp" size="lg" className="w-full justify-start">
+                      <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                        <FaWhatsapp className="mr-3 h-5 w-5" />
+                        Conversar no WhatsApp
+                      </a>
+                    </Button>
+                    
+                    <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
+                      <Mail className="text-primary" />
+                      <div>
+                        <p className="font-medium">E-mail</p>
+                        <p className="text-sm text-muted-foreground">contato@souzai.com.br</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-muted p-6 rounded-lg text-left">
+                  <h4 className="font-semibold mb-3">O que esperar da nossa conversa:</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <Check className="mt-0.5 text-primary" />
+                      <span>Análise gratuita do seu funil atual</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="mt-0.5 text-primary" />
+                      <span>Demonstração personalizada da solução</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="mt-0.5 text-primary" />
+                      <span>Proposta sob medida para suas necessidades</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="mt-0.5 text-primary" />
+                      <span>Cronograma de implementação</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
