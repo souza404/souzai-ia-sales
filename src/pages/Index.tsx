@@ -2,8 +2,8 @@ import hero from "@/assets/hero-souzai.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, MessageCircle, Shield, Zap, Send, Instagram, Globe, Mail, Bot, TrendingUp, LineChart } from "lucide-react";
-import { FaWhatsapp } from 'react-icons/fa';
+import { Check,Shield, Zap, Send, Instagram, Globe, Mail, Bot, TrendingUp, LineChart } from "lucide-react";
+import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
 import { LeadForm } from "@/components/souzai/LeadForm";
 import { FloatingWhatsApp } from "@/components/souzai/FloatingWhatsApp";
 import { ExitIntent } from "@/components/souzai/ExitIntent";
@@ -90,7 +90,7 @@ const Index = () => {
         <div className="relative container mx-auto px-6 py-20 md:py-28">
           <div className="text-center max-w-4xl mx-auto">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs bg-secondary text-muted-foreground border">
-              <Shield className="w-4 h-4 text-primary" /> Conformidade LGPD • Implantação em poucos dias
+              <Shield className="w-4 h-4 text-primary" /> Conformidade com a LGPD
             </span>
             <h1 className="mt-5 text-4xl md:text-6xl font-bold leading-tight text-white">
               <span>Agentes de IA que vendem e atendem por você 24/7</span>
@@ -109,19 +109,6 @@ const Index = () => {
                 </a>
               </Button>
             </div>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
-              <span className="uppercase tracking-wide text-white">Integra com</span>
-              <div className="flex items-center gap-4 opacity-90">
-                <FaWhatsapp className="w-5 h-5 text-primary text-white" aria-label="WhatsApp" />
-                <Instagram className="w-5 h-5 text-primary text-white" aria-label="Instagram" />
-                <Mail className="w-5 h-5 text-primary text-white" aria-label="E-mail" />
-                <Globe className="w-5 h-5 text-primary text-white" aria-label="Site" />
-                <Send className="w-5 h-5 text-primary text-white" aria-label="CRM" />
-              </div>
-            </div>
-            <div className="mt-6 text-xs text-muted-foreground max-w-2xl mx-auto text-white">
-              Outras opções de headline: "Transforme conversas em receita com agentes de IA treinados para seu negócio" • "Automatize vendas e suporte com IA que fala a língua do seu cliente".
-            </div>
           </div>
         </div>
       </section>
@@ -130,8 +117,8 @@ const Index = () => {
       <section id="beneficios" className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <h2 className="font-heading text-3xl mb-3">Equipes sobrecarregadas, respostas lentas e leads frios.</h2>
-            <p className="text-muted-foreground">Esses gargalos custam oportunidades todos os dias.</p>
+            <h2 className="font-heading text-3xl mb-3">Equipes sobrecarregadas, respostas lentas e leads frios?</h2>
+            <p className="text-muted-foreground">Esses gargalos não só atrasam processos, eles drenam vendas, esfriam leads prontos para comprar e deixam dinheiro na mesa todos os dias.</p>
           </div>
           <div>
             <h3 className="font-heading text-2xl mb-3">A solução SouzAI</h3>
@@ -139,10 +126,10 @@ const Index = () => {
             <ul className="grid sm:grid-cols-2 gap-3">
               {[
                 "Resposta imediata 24/7",
-                "Qualificação e roteamento automáticos",
-                "Aumento de conversão no funil",
+                "Qualificação de leads",
+                "Aumento de conversão",
                 "Redução de custos operacionais",
-                "Escala sem aumentar headcount",
+                "Escalabilidade",
               ].map((b) => (
                 <li key={b} className="flex items-start gap-2">
                   <Check className="mt-0.5 text-primary" /> <span>{b}</span>
@@ -187,7 +174,7 @@ const Index = () => {
             {title:"Marketing", items:["Nutrição", "Recuperações", "Reativações"]},
             {title:"Operações", items:["Onboarding", "Lembretes", "Pesquisas NPS"]},
           ].map((c) => (
-            <Card key={c.title} className="shadow-soft">
+            <Card key={c.title} className="shadow-soft transform transition-transform duration-300 hover:scale-105 hover:bg-secondary hover:cursor-pointer">
               <CardContent className="p-6">
                 <h3 className="font-heading text-xl mb-2">{c.title}</h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -237,35 +224,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Planos & Preços */}
-      <section id="planos" className="bg-secondary/60 border-y">
-        <div className="container mx-auto px-6 py-16">
-          <h2 className="font-heading text-3xl text-center mb-10">Planos & Preços</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {name:"START", features:["1 agente de IA","1 canal + 1 integração de CRM","Base de conhecimento essencial","Relatórios mensais"], cta:"Começar agora"},
-              {name:"PRO", features:["Até 3 agentes","Multicanais (WhatsApp, Instagram, site)","Integrações avançadas (n8n/Zapier/Make)","Treinamento contínuo + A/B de prompts","Relatórios semanais"], cta:"Agendar demo PRO"},
-              {name:"ENTERPRISE", features:["Agentes ilimitados","SSO, segurança avançada, SLA","Integração com ERPs/CRMs legados e APIs","Suporte dedicado e governança"], cta:"Falar com especialista"},
-            ].map((p, idx) => (
-              <Card key={p.name} className={`shadow-soft ${idx===1 ? 'border-primary' : ''}`}>
-                <CardContent className="p-6">
-                  <h3 className="font-heading text-xl mb-3">{p.name}</h3>
-                  <ul className="space-y-2 text-muted-foreground mb-6">
-                    {p.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2"><Check className="mt-0.5 text-primary" /> {f}</li>
-                    ))}
-                  </ul>
-                  <Button asChild variant={idx===1 ? 'hero' : 'outline'} className="w-full">
-                    <a href="#contato">{p.cta}</a>
-                  </Button>
-                  <p className="text-xs text-muted-foreground mt-3">Valores sob consulta. Implantação típica: dias, não meses.</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Diferenciais */}
       <section className="container mx-auto px-6 py-16">
         <h2 className="font-heading text-3xl text-center mb-10">Por que a SouzAI</h2>
@@ -307,9 +265,6 @@ const Index = () => {
                     <p className="text-sm text-muted-foreground mb-2">{step.week}</p>
                     <p className="text-sm">{step.desc}</p>
                   </div>
-                  {idx < 3 && (
-                    <div className="hidden md:block absolute top-6 left-full w-full h-0.5 bg-gradient-to-r from-primary to-primary/30 transform -translate-y-1/2" />
-                  )}
                 </div>
               ))}
             </div>
@@ -342,29 +297,6 @@ const Index = () => {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section className="container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="font-heading text-3xl mb-3">Pronto para crescer com IA que vende e atende por você?</h2>
-            <p className="text-muted-foreground mb-6">Receba um diagnóstico gratuito e um plano claro para o seu funil.</p>
-            <div className="flex gap-3">
-              <Button asChild variant="hero">
-                <a href="#contato">Agendar diagnóstico</a>
-              </Button>
-              <Button asChild variant="whatsapp">
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
-              </Button>
-            </div>
-          </div>
-          <Card className="shadow-soft">
-            <CardContent className="p-6">
-              <LeadForm id="contato-rodape" variant="compact" />
-            </CardContent>
-          </Card>
         </div>
       </section>
 
