@@ -150,7 +150,7 @@ const Index = () => {
               {t:"Treinamos o agente com sua base (produtos, políticas, tom de voz).", icon: LineChart},
               {t:"Implantamos, monitoramos e otimizamos para performance.", icon: Shield},
             ].map((s, i) => (
-              <Card key={i} className="shadow-soft">
+              <Card key={i} className="shadow-soft transform transition-transform duration-300 hover:scale-105 hover:bg-secondaryS">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="h-9 w-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-semibold">{i+1}</div>
@@ -174,7 +174,7 @@ const Index = () => {
             {title:"Marketing", items:["Nutrição", "Recuperações", "Reativações"]},
             {title:"Operações", items:["Onboarding", "Lembretes", "Pesquisas NPS"]},
           ].map((c) => (
-            <Card key={c.title} className="shadow-soft transform transition-transform duration-300 hover:scale-105 hover:bg-secondary hover:cursor-pointer">
+            <Card key={c.title} className="shadow-soft transform transition-transform duration-300 hover:scale-105 hover:bg-secondary">
               <CardContent className="p-6">
                 <h3 className="font-heading text-xl mb-2">{c.title}</h3>
                 <ul className="space-y-2 text-muted-foreground">
