@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, MessageCircle, Shield, Zap, Send, Instagram, Globe, Mail, Bot, TrendingUp, LineChart } from "lucide-react";
+import { FaWhatsapp } from 'react-icons/fa';
 import { LeadForm } from "@/components/souzai/LeadForm";
 import { FloatingWhatsApp } from "@/components/souzai/FloatingWhatsApp";
 import { ExitIntent } from "@/components/souzai/ExitIntent";
@@ -89,35 +90,36 @@ const Index = () => {
         <div className="relative container mx-auto px-6 py-20 md:py-28">
           <div className="text-center max-w-4xl mx-auto">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs bg-secondary text-muted-foreground border">
-              <Shield className="w-4 h-4 text-primary" /> Conformidade LGPD • Implantações rápidas em dias
+              <Shield className="w-4 h-4 text-primary" /> Conformidade LGPD • Implantação em poucos dias
             </span>
-            <h1 className="mt-5 text-4xl md:text-6xl font-bold leading-tight">
-              <span className="text-gradient-primary">Agentes de IA que vendem e atendem por você — 24/7</span>
+            <h1 className="mt-5 text-4xl md:text-6xl font-bold leading-tight text-white">
+              <span>Agentes de IA que vendem e atendem por você 24/7</span>
             </h1>
-            <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto">
+
+            <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto text-white">
               A SouzAI implementa e treina agentes de IA sob medida para captar leads, qualificar, fechar vendas e dar suporte — integrados aos seus canais e CRM.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center text-white">
               <Button asChild variant="hero" size="lg">
                 <a href="#contato">Quero uma demonstração</a>
               </Button>
               <Button asChild variant="whatsapp" size="lg">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-4 w-4" /> Falar no WhatsApp
+                  <FaWhatsapp className="mr-2 h-4 w-4" /> Falar no WhatsApp
                 </a>
               </Button>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
-              <span className="uppercase tracking-wide">Integra com</span>
+              <span className="uppercase tracking-wide text-white">Integra com</span>
               <div className="flex items-center gap-4 opacity-90">
-                <MessageCircle className="w-5 h-5 text-primary" aria-label="WhatsApp" />
-                <Instagram className="w-5 h-5 text-primary" aria-label="Instagram" />
-                <Mail className="w-5 h-5 text-primary" aria-label="E-mail" />
-                <Globe className="w-5 h-5 text-primary" aria-label="Site" />
-                <Send className="w-5 h-5 text-primary" aria-label="CRM" />
+                <FaWhatsapp className="w-5 h-5 text-primary text-white" aria-label="WhatsApp" />
+                <Instagram className="w-5 h-5 text-primary text-white" aria-label="Instagram" />
+                <Mail className="w-5 h-5 text-primary text-white" aria-label="E-mail" />
+                <Globe className="w-5 h-5 text-primary text-white" aria-label="Site" />
+                <Send className="w-5 h-5 text-primary text-white" aria-label="CRM" />
               </div>
             </div>
-            <div className="mt-6 text-xs text-muted-foreground max-w-2xl mx-auto">
+            <div className="mt-6 text-xs text-muted-foreground max-w-2xl mx-auto text-white">
               Outras opções de headline: "Transforme conversas em receita com agentes de IA treinados para seu negócio" • "Automatize vendas e suporte com IA que fala a língua do seu cliente".
             </div>
           </div>

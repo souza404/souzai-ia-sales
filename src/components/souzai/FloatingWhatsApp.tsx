@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from 'react-icons/fa';
 
 export const FloatingWhatsApp = () => {
   return (
@@ -11,7 +11,7 @@ export const FloatingWhatsApp = () => {
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp agora"
         >
-          <MessageCircle className="mr-1" /> Falar no WhatsApp
+          <FaWhatsapp className="mr-1" /> Falar no WhatsApp
         </a>
       </Button>
     </div>
