@@ -10,6 +10,7 @@ import {
   Calendar,
   Users
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface Project {
   id: string;
@@ -211,7 +212,7 @@ export function ProjectsCarousel() {
               Agendar Diagnóstico Gratuito
             </Button>
             <Button variant="whatsapp" size="lg">
-              <MessageSquare className="mr-2 h-4 w-4" />
+              <FaWhatsapp className="mr-2 h-4 w-4" />
               Falar no WhatsApp
             </Button>
           </div>
