@@ -319,13 +319,6 @@ const Index = () => {
                 <div className="text-left">
                   <h3 className="font-heading text-xl mb-4">Outras formas de contato</h3>
                   <div className="space-y-4">
-                    <Button asChild variant="whatsapp" size="lg" className="w-full justify-start">
-                      <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                        <FaWhatsapp className="mr-3 h-5 w-5" />
-                        Conversar no WhatsApp
-                      </a>
-                    </Button>
-                    
                     <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
                       <Mail className="text-primary" />
                       <div>

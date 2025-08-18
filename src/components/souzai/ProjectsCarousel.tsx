@@ -202,21 +202,7 @@ export function ProjectsCarousel() {
           </Carousel>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <p className="text-lg text-muted-foreground mb-6">
-            Quer implementar uma solução similar na sua empresa?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="hero">
-              Agendar Diagnóstico Gratuito
-            </Button>
-            <Button variant="whatsapp" size="lg">
-              <FaWhatsapp className="mr-2 h-4 w-4" />
-              Falar no WhatsApp
-            </Button>
-          </div>
-        </div>
+       
       </div>
     </section>
   );
