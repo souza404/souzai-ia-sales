@@ -303,53 +303,48 @@ const Index = () => {
       {/* Contato */}
       <section id="contato" className="bg-secondary/60 border-y">
         <div className="container mx-auto px-6 py-16">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-2xl mx-auto text-center">
             <h2 className="font-heading text-3xl mb-4">Entre em contato</h2>
             <p className="text-muted-foreground mb-10">Pronto para transformar seu atendimento com IA? Vamos conversar sobre suas necessidades.</p>
             
-            <div className="grid md:grid-cols-2 gap-10 items-start">
-              <Card className="shadow-soft">
-                <CardContent className="p-8">
-                  <h3 className="font-heading text-xl mb-6">Solicite uma demonstração</h3>
-                  <LeadForm id="contato-principal" />
-                </CardContent>
-              </Card>
-              
-              <div className="space-y-6">
-                <div className="text-left">
-                  <h3 className="font-heading text-xl mb-4">Outras formas de contato</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
-                      <Mail className="text-primary" />
-                      <div>
-                        <p className="font-medium">E-mail</p>
-                        <p className="text-sm text-muted-foreground">contato@souzai.com.br</p>
-                      </div>
-                    </div>
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
+                  <Mail className="text-primary" />
+                  <div className="text-left">
+                    <p className="font-medium">E-mail</p>
+                    <p className="text-sm text-muted-foreground">contato@souzai.com.br</p>
                   </div>
                 </div>
-                
-                <div className="bg-muted p-6 rounded-lg text-left">
-                  <h4 className="font-semibold mb-3">O que esperar da nossa conversa:</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <Check className="mt-0.5 text-primary" />
-                      <span>Análise gratuita do seu funil atual</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="mt-0.5 text-primary" />
-                      <span>Demonstração personalizada da solução</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="mt-0.5 text-primary" />
-                      <span>Proposta sob medida para suas necessidades</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="mt-0.5 text-primary" />
-                      <span>Cronograma de implementação</span>
-                    </li>
-                  </ul>
+                <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
+                  <FaWhatsapp className="text-primary" />
+                  <div className="text-left">
+                    <p className="font-medium">WhatsApp</p>
+                    <p className="text-sm text-muted-foreground">(11) 99999-9999</p>
+                  </div>
                 </div>
+              </div>
+              
+              <div className="bg-muted p-6 rounded-lg text-left">
+                <h4 className="font-semibold mb-3">O que esperar da nossa conversa:</h4>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <Check className="mt-0.5 text-primary" />
+                    <span>Análise gratuita do seu funil atual</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="mt-0.5 text-primary" />
+                    <span>Demonstração personalizada da solução</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="mt-0.5 text-primary" />
+                    <span>Proposta sob medida para suas necessidades</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="mt-0.5 text-primary" />
+                    <span>Cronograma de implementação</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
