@@ -6,7 +6,7 @@ export const FloatingWhatsApp = () => {
     <div className="fixed bottom-5 right-5 z-50">
       <Button asChild variant="whatsapp" size="lg" className="shadow-glow">
         <a
-          href="https://wa.me/5500000000000?text=Olá%20SouzAI!%20Quero%20falar%20com%20um%20especialista."
+          href="https://wa.me/5531992510973?text=Olá%20SouzAI!%20Quero%20falar%20com%20um%20especialista."
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp agora"

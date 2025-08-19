@@ -82,7 +82,7 @@ const projects: Project[] = [
 
 export function ProjectsCarousel() {
   return (
-    <section className="bg-secondary/60 border-y">
+    <section id="projetos" className="bg-secondary/60 border-y">
       <div className="container mx-auto px-6 py-16">
         {/* Header */}
         <div className="text-center mb-12">

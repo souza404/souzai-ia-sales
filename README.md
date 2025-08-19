@@ -1,75 +1,72 @@
-# Welcome to your Lovable project
+# souzai-ia-sales
 
-## Project info
+Bem-vindo ao repositório **souzai-ia-sales**.
 
-**URL**: https://lovable.dev/projects/2152487f-5bdf-4eda-b61b-f71c2cbeb59b
+## Descrição
 
-## How can I edit this code?
+Este projeto utiliza inteligência artificial para otimizar processos de vendas, fornecendo insights e automações para melhorar a eficiência e os resultados.
 
-There are several ways of editing your application.
+## Funcionalidades
 
-**Use Lovable**
+- Análise de dados de vendas.
+- Geração de relatórios inteligentes.
+- Automação de tarefas repetitivas.
+- Previsão de tendências de mercado.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2152487f-5bdf-4eda-b61b-f71c2cbeb59b) and start prompting.
+## Requisitos
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Node.js** versão 16 ou superior.
+- **NPM** ou **Yarn** para gerenciamento de pacotes.
+- Banco de dados compatível (ex.: PostgreSQL, MongoDB).
 
-**Use your preferred IDE**
+## Instalação
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. Clone o repositório:
+  ```bash
+  git clone https://github.com/seu-usuario/souzai-ia-sales.git
+  ```
+2. Acesse o diretório do projeto:
+  ```bash
+  cd souzai-ia-sales
+  ```
+3. Instale as dependências:
+  ```bash
+  npm install
+  ```
+4. Configure as variáveis de ambiente no arquivo `.env`.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Uso
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+Inicie o servidor de desenvolvimento:
+```bash
+npm start
 ```
 
-**Edit a file directly in GitHub**
+Acesse a aplicação em [http://localhost:3000](http://localhost:3000).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Contribuição
 
-**Use GitHub Codespaces**
+Contribuições são bem-vindas! Siga os passos abaixo:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature:
+  ```bash
+  git checkout -b minha-feature
+  ```
+3. Faça commit das suas alterações:
+  ```bash
+  git commit -m "Adiciona minha feature"
+  ```
+4. Envie para o repositório remoto:
+  ```bash
+  git push origin minha-feature
+  ```
+5. Abra um Pull Request.
 
-## What technologies are used for this project?
+## Licença
 
-This project is built with:
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Contato
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2152487f-5bdf-4eda-b61b-f71c2cbeb59b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-
-Teste
+Para dúvidas ou sugestões, entre em contato pelo e-mail: [seu-email@exemplo.com](mailto:seu-email@exemplo.com).

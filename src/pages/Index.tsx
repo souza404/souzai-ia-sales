@@ -2,16 +2,12 @@ import hero from "@/assets/hero-souzai.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check,Shield, Zap, Send, Instagram, Globe, Mail, Bot, TrendingUp, LineChart } from "lucide-react";
-import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
-import { LeadForm } from "@/components/souzai/LeadForm";
+import { Check,Shield, Zap, Globe, Mail, Bot, TrendingUp, LineChart } from "lucide-react";
+import { FaWhatsapp } from 'react-icons/fa';
 import { FloatingWhatsApp } from "@/components/souzai/FloatingWhatsApp";
 import { ExitIntent } from "@/components/souzai/ExitIntent";
-import { AutomationsCarousel } from "@/components/souzai/AutomationsCarousel";
 import { ProjectsCarousel } from "@/components/souzai/ProjectsCarousel";
 import { useEffect } from "react";
-
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá%20SouzAI!%20Quero%20uma%20demonstração.";
 
 const Index = () => {
   useEffect(() => {
@@ -70,7 +66,6 @@ const Index = () => {
             <a href="#beneficios" className="hover:text-primary transition-colors">Benefícios</a>
             <a href="#como-funciona" className="hover:text-primary transition-colors">Como funciona</a>
             <a href="#casos" className="hover:text-primary transition-colors">Casos de uso</a>
-            <a href="#planos" className="hover:text-primary transition-colors">Planos</a>
             <a href="#depoimentos" className="hover:text-primary transition-colors">Depoimentos</a>
             <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
             <a href="#contato" className="hover:text-primary transition-colors">Contato</a>
@@ -99,14 +94,9 @@ const Index = () => {
             <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto text-white">
               A SouzAI implementa e treina agentes de IA sob medida para captar leads, qualificar, fechar vendas e dar suporte — integrados aos seus canais e CRM.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center text-white">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center text-white transform transition-transform duration-300 hover:scale-105">
               <Button asChild variant="hero" size="lg">
-                <a href="#contato">Quero uma demonstração</a>
-              </Button>
-              <Button asChild variant="whatsapp" size="lg">
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  <FaWhatsapp className="mr-2 h-4 w-4" /> Falar no WhatsApp
-                </a>
+                <a href="#projetos">Quero uma demonstração</a>
               </Button>
             </div>
           </div>
@@ -128,7 +118,7 @@ const Index = () => {
                 "Resposta imediata 24/7",
                 "Qualificação de leads",
                 "Aumento de conversão",
-                "Redução de custos operacionais",
+                "Redução de custos",
                 "Escalabilidade",
               ].map((b) => (
                 <li key={b} className="flex items-start gap-2">
@@ -150,7 +140,7 @@ const Index = () => {
               {t:"Treinamos o agente com sua base (produtos, políticas, tom de voz).", icon: LineChart},
               {t:"Implantamos, monitoramos e otimizamos para performance.", icon: Shield},
             ].map((s, i) => (
-              <Card key={i} className="shadow-soft transform transition-transform duration-300 hover:scale-105 hover:bg-secondaryS">
+              <Card key={i} className="shadow-soft transform transition-transform duration-300 hover:scale-105 hover:bg-secondary">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="h-9 w-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-semibold">{i+1}</div>
@@ -270,7 +260,7 @@ const Index = () => {
             </div>
             <div className="text-center mt-8">
               <p className="text-muted-foreground mb-4">Suporte contínuo e otimizações durante os primeiros 90 dias</p>
-              <Button asChild variant="hero">
+              <Button asChild variant="hero" className="transform transition-transform duration-300 hover:scale-105">
                 <a href="#contato">Começar implementação</a>
               </Button>
             </div>
@@ -303,11 +293,11 @@ const Index = () => {
       {/* Contato */}
       <section id="contato" className="bg-secondary/60 border-y">
         <div className="container mx-auto px-6 py-16">
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="max-w-xl mx-auto text-center">
             <h2 className="font-heading text-3xl mb-4">Entre em contato</h2>
             <p className="text-muted-foreground mb-10">Pronto para transformar seu atendimento com IA? Vamos conversar sobre suas necessidades.</p>
             
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="space-y-4">
                 <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
                   <Mail className="text-primary" />
@@ -320,7 +310,7 @@ const Index = () => {
                   <FaWhatsapp className="text-primary" />
                   <div className="text-left">
                     <p className="font-medium">WhatsApp</p>
-                    <p className="text-sm text-muted-foreground">(11) 99999-9999</p>
+                    <p className="text-sm text-muted-foreground">(31) 99251-0873</p>
                   </div>
                 </div>
               </div>
