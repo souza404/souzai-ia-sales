@@ -8,7 +8,8 @@ import {
   ShoppingCart,
   TrendingUp,
   Calendar,
-  Users
+  Users,
+  Mail
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 

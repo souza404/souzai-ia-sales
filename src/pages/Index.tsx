@@ -2,12 +2,14 @@ import hero from "@/assets/hero-souzai.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check,Shield, Zap, Globe, Mail, Bot, TrendingUp, LineChart, Smartphone, Monitor, ShoppingCart, Building, Palette, Code, Rocket, Clock, Star, ExternalLink, ArrowRight } from "lucide-react";
+import { Check,Shield, Zap, Globe, Mail, Bot, TrendingUp, LineChart, Smartphone, Monitor, ShoppingCart, Building, Palette, Code, Rocket, Clock, Star, ExternalLink, ArrowRight, Brain, AppWindow, BrainCircuit, Box, Badge, CodeXml, ShieldCheck, Workflow, Network, DatabaseZapIcon, DatabaseZap } from "lucide-react";
 import { FaWhatsapp } from 'react-icons/fa';
 import { FloatingWhatsApp } from "@/components/souzai/FloatingWhatsApp";
 import { ExitIntent } from "@/components/souzai/ExitIntent";
 import { ProjectsCarousel } from "@/components/souzai/ProjectsCarousel";
 import { useEffect, useState } from "react";
+
+
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("agentes");
@@ -45,7 +47,7 @@ const Index = () => {
     const services = {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "SouzAI - Agentes de IA e Criação de Sites",
+      name: "SouzAI | Agentes de IA e Criação de Sites",
       provider: {
         "@type": "Organization",
         name: "SouzAI"
@@ -70,7 +72,7 @@ const Index = () => {
     document.head.appendChild(scriptServices);
 
     // Update document title and meta description
-    document.title = "SouzAI — Agentes de IA e Criação de Sites | Landing, Institucional e Loja Virtual";
+    document.title = "SouzAI | Agentes e Sites";
     
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
@@ -95,7 +97,7 @@ const Index = () => {
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:glass border-b">
         <div className="container mx-auto flex items-center justify-between py-3">
           <a href="#" className="flex items-center gap-2">
-            <Bot className="text-primary" />
+            <img src="./././public/SouzAI-logo-roxo.png" alt="SouzAI Logo" className="h-12 text-primary" />
             <span className="font-heading text-lg">SouzAI</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -130,24 +132,16 @@ const Index = () => {
             </h1>
 
             <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto text-white">
-              A SouzAI implementa agentes de IA e desenvolve sites (landing pages, institucionais e lojas virtuais) para captar leads, vender mais e escalar seu atendimento — integrados aos seus canais, CRM e métricas.
+              A SouzAI implementa agentes de IA e desenvolve sites (landing pages, institucionais e lojas virtuais) para captar leads, vender mais e escalar seu atendimento, integrados aos seus canais, CRM e métricas.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center text-white">
-              <Button asChild variant="hero" size="lg" className="transform transition-transform duration-300 hover:scale-105">
-                <a href="#contato">Agendar diagnóstico</a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary transform transition-transform duration-300 hover:scale-105">
-                <a href="https://wa.me/5531992510873" target="_blank">Falar no WhatsApp</a>
-              </Button>
-            </div>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
-                <span>LGPD OK</span>
+                <BrainCircuit className="w-4 h-4" />
+                <span>Agentes de IA escaláveis</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4" />
-                <span>Implantações rápidas em dias</span>
+                <AppWindow className="w-4 h-4" />
+                <span>Sites que convertem</span>
               </div>
             </div>
           </div>
@@ -156,32 +150,45 @@ const Index = () => {
 
       {/* Service Toggle */}
       <section className="container mx-auto px-6 py-8">
-        <div className="flex justify-center">
-          <div className="flex bg-secondary rounded-lg p-1 shadow-soft">
-            <button
-              onClick={() => setActiveTab("agentes")}
-              className={`px-6 py-3 rounded-md text-sm font-medium transition-all duration-300 ${
-                activeTab === "agentes"
-                  ? "bg-primary text-primary-foreground shadow-glow"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              <Bot className="w-4 h-4 inline-block mr-2" />
-              Agentes de IA
-            </button>
-            <button
-              onClick={() => setActiveTab("sites")}
-              className={`px-6 py-3 rounded-md text-sm font-medium transition-all duration-300 ${
-                activeTab === "sites"
-                  ? "bg-primary text-primary-foreground shadow-glow"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              <Globe className="w-4 h-4 inline-block mr-2" />
-              Criação de Sites
-            </button>
-          </div>
+        <div className="text-center mb-6">
+          <h2 className="font-heading text-3xl mb-4">
+            Conheça nossos serviços
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Navegue entre os nossos serviços e descubra como podemos ajudar a sua empresa a crescer.
+          </p>
         </div>
+        <div className="flex justify-center">
+
+        <div className="flex bg-secondary rounded-xl p-1 shadow-xl shadow-black/15 dark:shadow-black/40 transition-shadow">
+          <button
+            onClick={() => setActiveTab("agentes")}
+            className={`px-6 py-3 rounded-md text-sm font-medium will-change-transform transition-[box-shadow,transform,background-color,color] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 active:translate-y-[1px] active:shadow-md ${
+              activeTab === "agentes"
+                ? "bg-primary text-primary-foreground shadow-2xl shadow-black/25 hover:-translate-y-0.5"
+                : "text-muted-foreground hover:text-foreground hover:bg-primary/5 hover:-translate-y-0.5"
+            }`}
+            aria-pressed={activeTab === "agentes"}
+          >
+            <Bot className="w-4 h-4 inline-block mr-2 drop-shadow" />
+            Agentes de IA
+          </button>
+
+          <button
+            onClick={() => setActiveTab("sites")}
+            className={`px-6 py-3 rounded-md text-sm font-medium will-change-transform transition-[box-shadow,transform,background-color,color] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 active:translate-y-[1px] active:shadow-md ${
+              activeTab === "sites"
+                ? "bg-primary text-primary-foreground shadow-2xl shadow-black/25 hover:-translate-y-0.5"
+                : "text-muted-foreground hover:text-foreground hover:bg-primary/5 hover:-translate-y-0.5"
+            }`}
+            aria-pressed={activeTab === "sites"}
+          >
+            <CodeXml className="w-4 h-4 inline-block mr-2 drop-shadow" />
+            Criação de Sites
+          </button>
+        </div>
+      </div>
+
       </section>
 
       {/* Conteúdo dos Agentes de IA */}
@@ -214,28 +221,63 @@ const Index = () => {
       </section>
 
       {/* Como funciona */}
-      <section id="como-funciona" className="bg-secondary/60 border-y">
-        <div className="container mx-auto px-6 py-16">
-          <h2 className="font-heading text-3xl text-center mb-10">Como funciona em 3 passos</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {t:"Mapeamos seus fluxos e integrações (canais, CRM, ofertas).", icon: Zap},
-              {t:"Treinamos o agente com sua base (produtos, políticas, tom de voz).", icon: LineChart},
-              {t:"Implantamos, monitoramos e otimizamos para performance.", icon: Shield},
-            ].map((s, i) => (
-              <Card key={i} className="shadow-soft transform transition-transform duration-300 hover:scale-105 hover:bg-secondary">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="h-9 w-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-semibold">{i+1}</div>
-                    <s.icon className="text-primary" />
-                  </div>
-                  <p className="text-muted-foreground">{s.t}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+
+
+<section id="como-funciona" className="bg-secondary/60 border-y">
+  <div className="container mx-auto px-6 py-16">
+    <h2 className="font-heading text-3xl text-center mb-10">Como funciona em 3 passos</h2>
+
+    <div className="grid md:grid-cols-3 gap-6">
+      {[
+        {
+          h: "Diagnóstico Inteligente",
+          sh: "Descobrimos onde a IA gera mais ROI",
+          t: "Mapeamos seus fluxos, canais e métricas para priorizar automações de impacto.",
+          icon: Network,
+        },
+        {
+          h: "Treino com Seus Dados",
+          sh: "Agente alinhado ao seu tom de voz",
+          t: "Conectamos CRM, base de conhecimento e políticas para respostas precisas e seguras.",
+          icon: DatabaseZap,
+        },
+        {
+          h: "Lançamento & Otimização",
+          sh: "Operando 24/7 nos seus canais",
+          t: "Publicamos em WhatsApp, site e Instagram, monitoramos KPIs e escalamos o que funciona.",
+          icon: Rocket,
+        },
+      ].map((s, i) => (
+        <Card
+          key={i}
+          className="shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/20 transition-transform duration-300 hover:scale-105 hover:bg-secondary"
+        >
+          <CardContent className="p-6">
+            <div className="flex items-start gap-3 mb-2">
+              <div className="h-9 w-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-semibold">
+                {i + 1}
+              </div>
+
+              <s.icon className="text-primary w-5 h-5 mt-1" aria-hidden="true" />
+
+              <div className="flex-1">
+                <h3 className="text-base font-semibold text-foreground leading-none">
+                  {s.h}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {s.sh}
+                </p>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground">{s.t}</p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Casos de uso */}
       <section id="casos" className="container mx-auto px-6 py-16">
@@ -273,7 +315,7 @@ const Index = () => {
             {q:"O agente qualificou leads com precisão e liberou nosso time para fechar negócios.", a:"Bruno A., Diretor Comercial"},
             {q:"Integração rápida ao CRM e relatórios que mostram evolução semana a semana.", a:"Camila R., Head de Growth"},
           ].map((t) => (
-            <Card key={t.a} className="shadow-soft">
+            <Card key={t.a} className="shadow-soft transform transition-transform duration-300 hover:scale-105 hover:bg-secondary">
               <CardContent className="p-6">
                 <p className="mb-3">“{t.q}”</p>
                 <p className="text-sm text-muted-foreground">— {t.a}</p>
@@ -287,7 +329,7 @@ const Index = () => {
             "−42% no tempo médio de resposta",
             "+28% reuniões agendadas",
           ].map((m) => (
-            <Card key={m} className="shadow-soft">
+            <Card key={m} className="shadow-soft transform transition-transform duration-300 hover:scale-105 hover:bg-secondary">
               <CardContent className="p-6 flex items-center gap-3">
                 <TrendingUp className="text-primary" />
                 <span className="font-semibold">{m}</span>
@@ -299,7 +341,7 @@ const Index = () => {
 
       {/* Diferenciais */}
       <section className="container mx-auto px-6 py-16">
-        <h2 className="font-heading text-3xl text-center mb-10">Por que a SouzAI</h2>
+        <h2 className="font-heading text-3xl text-center mb-10">Por que a SouzAI?</h2>
         <div className="grid md:grid-cols-4 gap-6">
           {[
             "Treinamos no seu tom de voz e regras de negócio.",
@@ -307,9 +349,9 @@ const Index = () => {
             "Monitoramento humano + melhoria contínua.",
             "LGPD, segurança e privacidade by design.",
           ].map((d) => (
-            <Card key={d} className="shadow-soft">
+            <Card key={d} className="shadow-soft transform transition-transform duration-300 hover:scale-105 hover:bg-secondary">
               <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-2"><Shield className="text-primary" /> <h3 className="font-semibold">Diferencial</h3></div>
+                <div className="flex items-center gap-2 mb-2"><ShieldCheck className="text-primary" /> <h3 className="font-semibold">Diferencial</h3></div>
                 <p className="text-muted-foreground text-sm">{d}</p>
               </CardContent>
             </Card>
@@ -379,7 +421,7 @@ const Index = () => {
         {/* Por que ter um site com a SouzAI */}
         <section id="criacao-sites" className="container mx-auto px-6 py-16">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl mb-6">Sites pensados para vender — não só para "estar no ar"</h2>
+            <h2 className="font-heading text-4xl md:text-3xl mb-6">Sites projetados para vender, não só para "estar no ar"</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Desenvolvemos sites que convertem visitantes em clientes, com arquitetura focada em performance e resultados.
             </p>
@@ -484,7 +526,7 @@ const Index = () => {
         {/* Planos & Preços */}
         <section id="planos" className="bg-secondary/60 border-y">
           <div className="container mx-auto px-6 py-16">
-            <h2 className="font-heading text-3xl text-center mb-10">Planos & Preços — Criação de Sites</h2>
+            <h2 className="font-heading text-3xl text-center mb-10">Planos & Preços - Criação de Sites</h2>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {[
                 {
@@ -646,128 +688,11 @@ const Index = () => {
       {/* Contato */}
       <section id="contato" className="bg-secondary/60 border-y">
         <div className="container mx-auto px-6 py-16">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Formulário Agentes de IA */}
-            <div className="bg-card rounded-lg p-6 shadow-soft">
-              <h3 className="font-heading text-2xl mb-4">Interesse em Agentes de IA</h3>
-              <p className="text-muted-foreground mb-6">Receba um diagnóstico gratuito do seu funil atual</p>
-              <form className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Nome *</label>
-                    <input type="text" className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring" required />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">E-mail *</label>
-                    <input type="email" className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring" required />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Empresa</label>
-                  <input type="text" className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">WhatsApp *</label>
-                  <input type="tel" className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring" required />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Objetivo principal</label>
-                  <select className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring">
-                    <option>Qualificar leads</option>
-                    <option>Aumentar vendas</option>
-                    <option>Melhorar suporte</option>
-                    <option>Automatizar processos</option>
-                  </select>
-                </div>
-                <div className="flex items-start gap-2">
-                  <input type="checkbox" className="mt-1" required />
-                  <label className="text-sm text-muted-foreground">
-                    Autorizo contato e tratamento conforme a Política de Privacidade. *
-                  </label>
-                </div>
-                <Button type="submit" className="w-full" variant="hero">
-                  Quero meu diagnóstico gratuito
-                </Button>
-              </form>
-            </div>
-
-            {/* Formulário Criação de Sites */}
-            <div className="bg-card rounded-lg p-6 shadow-soft">
-              <h3 className="font-heading text-2xl mb-4">Interesse em Criação de Sites</h3>
-              <p className="text-muted-foreground mb-6">Solicite uma análise para seu projeto de site</p>
-              <form className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Nome *</label>
-                    <input type="text" className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring" required />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">E-mail *</label>
-                    <input type="email" className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring" required />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Empresa</label>
-                  <input type="text" className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">WhatsApp *</label>
-                  <input type="tel" className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring" required />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Tipo de site</label>
-                  <select className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring">
-                    <option>Landing Page</option>
-                    <option>Site Institucional</option>
-                    <option>Loja Virtual</option>
-                    <option>Combo (Site + IA)</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Objetivo principal</label>
-                  <select className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring">
-                    <option>Gerar leads</option>
-                    <option>Vender online</option>
-                    <option>Construir autoridade</option>
-                    <option>Melhorar presença digital</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Prazo desejado</label>
-                  <select className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring">
-                    <option>Até 2 semanas</option>
-                    <option>Até 1 mês</option>
-                    <option>Até 2 meses</option>
-                    <option>Sem pressa</option>
-                  </select>
-                </div>
-                <div className="flex items-start gap-2">
-                  <input type="checkbox" className="mt-1" required />
-                  <label className="text-sm text-muted-foreground">
-                    Autorizo contato e tratamento conforme a Política de Privacidade. *
-                  </label>
-                </div>
-                <Button type="submit" className="w-full" variant="hero">
-                  Solicitar análise do meu projeto
-                </Button>
-              </form>
-            </div>
-          </div>
-
           {/* Informações de contato */}
           <div className="max-w-4xl mx-auto mt-16">
-            <h2 className="font-heading text-3xl text-center mb-4">Pronto para um site que converte — com IA trabalhando por você?</h2>
+            <h2 className="font-heading text-3xl text-center mb-4">Pronto para um site que converte com IA trabalhando por você?</h2>
             <p className="text-muted-foreground text-center mb-10">Receba um diagnóstico gratuito e um plano claro para seu funil e sua presença digital.</p>
             
-            <div className="text-center space-y-4 mb-8">
-              <Button asChild variant="hero" size="lg" className="transform transition-transform duration-300 hover:scale-105">
-                <a href="#contato">Agendar diagnóstico</a>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="https://wa.me/5531992510873" target="_blank">Falar no WhatsApp agora</a>
-              </Button>
-            </div>
-
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
                 <Mail className="text-primary" />
