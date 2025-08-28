@@ -15,11 +15,11 @@ export const FloatingWhatsApp = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp agora"
-          className="flex items-center justify-center h-full w-full"
         >
-          <FaWhatsapp className="text-2xl drop-shadow-sm" />
+          <FaWhatsapp className="text-4xl drop-shadow-sm" />
         </a>
       </Button>
     </div>
   );
 };
+

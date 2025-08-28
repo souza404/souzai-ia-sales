@@ -227,7 +227,7 @@ const Index = () => {
   <div className="container mx-auto px-6 py-16">
     <h2 className="font-heading text-3xl text-center mb-10">Como funciona em 3 passos</h2>
 
-    <div className="grid md:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-3 gap-6 select-none">
       {[
         {
           h: "Diagnóstico Inteligente",
@@ -250,15 +250,14 @@ const Index = () => {
       ].map((s, i) => (
         <Card
           key={i}
-          className="shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/20 transition-transform duration-300 hover:scale-105 hover:bg-secondary"
+          className="shadow-soft hover:shadow-glow transition-all duration-300 group"
         >
           <CardContent className="p-6">
-            <div className="flex items-start gap-3 mb-2">
+            <div className="flex items-start gap-3 mb-2 select-none">
               <div className="h-9 w-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-semibold">
                 {i + 1}
               </div>
-
-              <s.icon className="text-primary w-5 h-5 mt-1" aria-hidden="true" />
+              <s.icon className="w-8 h-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" aria-hidden="true" />
 
               <div className="flex-1">
                 <h3 className="text-base font-semibold text-foreground leading-none">
@@ -280,7 +279,7 @@ const Index = () => {
 
 
       {/* Casos de uso */}
-      <section id="casos" className="container mx-auto px-6 py-16">
+      <section id="casos" className="container mx-auto px-6 py-16 select-none">
         <h2 className="font-heading text-3xl text-center mb-10">Casos de uso</h2>
         <div className="grid md:grid-cols-4 gap-6">
           {[
@@ -307,7 +306,7 @@ const Index = () => {
       <ProjectsCarousel />
 
       {/* Provas sociais */}
-      <section id="depoimentos" className="container mx-auto px-6 py-16">
+      <section id="depoimentos" className="container mx-auto px-6 py-16 select-none">
         <h2 className="font-heading text-3xl text-center mb-10">Resultados que geram confiança</h2>
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {[
@@ -340,7 +339,7 @@ const Index = () => {
       </section>
 
       {/* Diferenciais */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-6 py-16 select-none">
         <h2 className="font-heading text-3xl text-center mb-10">Por que a SouzAI?</h2>
         <div className="grid md:grid-cols-4 gap-6">
           {[
