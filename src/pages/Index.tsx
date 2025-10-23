@@ -72,7 +72,7 @@ const Index = () => {
     document.head.appendChild(scriptServices);
 
     // Update document title and meta description
-    document.title = "SouzAI | Agentes e Sites";
+    document.title = "SouzAI | Agentes de IA e Sites";
     
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
@@ -478,49 +478,54 @@ const Index = () => {
         </section>
 
         {/* Portfólio/Mostruário */}
-        <section id="portfolio" className="container mx-auto px-6 py-16">
+        <section id="portfolio" className="container mx-auto px-6 py-16 select-none">
           <h2 className="font-heading text-3xl text-center mb-10">Portfólio de sites que convertem</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {[
-              { sector: "Saúde", result: "+32% leads em 45 dias", image: "/placeholder.svg" },
-              { sector: "Educação", result: "+28% matrículas online", image: "/placeholder.svg" },
-              { sector: "Serviços", result: "+45% conversões", image: "/placeholder.svg" },
-              { sector: "E-commerce", result: "+38% vendas online", image: "/placeholder.svg" },
-              { sector: "Tecnologia", result: "+52% demos agendadas", image: "/placeholder.svg" },
-              { sector: "Imobiliário", result: "+41% leads qualificados", image: "/placeholder.svg" }
-            ].map((project, idx) => (
-              <Card key={idx} className="shadow-soft hover:shadow-glow transition-all duration-300 group overflow-hidden">
-                <div className="aspect-video bg-gradient-primary/20 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <div className="bg-black/50 backdrop-blur px-3 py-1 rounded-full text-sm">
-                      {project.sector}
-                    </div>
+          {[
+            { sector: "Saúde", result: "PulseFit", image: "/./src/assets/pulsefit-print.png" },
+            { sector: "Fintech", result: "Zyra", image: "././src/assets/zyra-print.png" },
+            { sector: "Tecnologia", result: "CodeUp Academy", image: "././src/assets/codeup-print.png" },
+            { sector: "Tecnologia", result: "ZapEats", image: "././src/assets/zapeats-print.png" },
+            { sector: "Fintech", result: "MoneyMind Academy", image: "././src/assets/moneymind-print.png" },
+            { sector: "Tecnologia", result: "TaskPro", image: "././src/assets/taskpro-print.png" }
+            
+            
+          ].map((project, idx) => (
+            <Card key={idx} className="shadow-soft hover:shadow-glow transition-all duration-300 group overflow-hidden">
+              <div className="aspect-video bg-gradient-primary/20 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent">
+                  <img src={project.image} alt={project.sector} className="object-cover w-full h-full" />
+                </div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <div className="bg-black/50 backdrop-blur px-3 py-1 rounded-full text-sm">
+                    {project.sector}
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-semibold text-primary">{project.result}</p>
-                      <p className="text-sm text-muted-foreground">Resultado comprovado</p>
-                    </div>
-                    <Button variant="ghost" size="sm" className="group-hover:text-primary">
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-primary">{project.result}</p>
+                    <p className="text-sm text-muted-foreground">Confira o projeto com mais detalhes</p>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center space-x-4">
-            <Button variant="outline" size="lg">
-              Ver portfólio completo
-            </Button>
-            <Button variant="hero" size="lg">
-              Solicitar análise do meu caso
-            </Button>
-          </div>
-        </section>
+                  <Button variant="ghost" size="sm" className="group-hover:text-primary">
+                    <ExternalLink className="w-4 h-4" />
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        <div className="text-center space-x-4">
+          <Button variant="outline" size="lg">
+            Ver portfólio completo
+          </Button>
+          <Button variant="hero" size="lg">
+            Solicitar análise do meu caso
+          </Button>
+        </div>
+      </section>
+
 
         {/* Planos & Preços */}
         <section id="planos" className="bg-secondary/60 border-y">
