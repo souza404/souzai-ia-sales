@@ -114,7 +114,7 @@ const Index = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-primary opacity-20 animate-gradient-slow" aria-hidden="true" />
-        <img src={hero} alt="Fundo tecnológico em gradiente roxo com glassmorphism" className="absolute inset-0 w-full h-full object-cover" loading="eager" />
+        <img src={hero} alt="Fundo tecnológico em gradiente roxo com glassmorphism" className="absolute inset-0 w-full h-full object-cover object-center scale-100 md:scale-110" loading="eager" />
         <div className="relative container mx-auto px-6 py-20 md:py-28">
           <div className="text-center max-w-4xl mx-auto">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs bg-secondary text-muted-foreground border">
