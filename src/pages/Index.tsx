@@ -2,18 +2,16 @@ import hero from "@/assets/hero-souzai.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check,Shield, Zap, Globe, Mail, Bot, TrendingUp, LineChart, Smartphone, Monitor, ShoppingCart, Building, Palette, Code, Rocket, Clock, Star, ExternalLink, ArrowRight, Brain, AppWindow, BrainCircuit, Box, Badge, CodeXml, ShieldCheck, Workflow, Network, DatabaseZapIcon, DatabaseZap } from "lucide-react";
+import { Check, Shield, Bot, TrendingUp, BrainCircuit, ShieldCheck, Workflow, Network, DatabaseZap, Rocket, Mail } from "lucide-react";
 import { FaWhatsapp } from 'react-icons/fa';
 import { FloatingWhatsApp } from "@/components/souzai/FloatingWhatsApp";
 import { ExitIntent } from "@/components/souzai/ExitIntent";
 import { ProjectsCarousel } from "@/components/souzai/ProjectsCarousel";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 
 
 const Index = () => {
-  const [activeTab, setActiveTab] = useState("agentes");
-
   useEffect(() => {
     // Structured data: Organization + FAQ
     const org = {
@@ -37,23 +35,20 @@ const Index = () => {
         {"@type":"Question","name":"Quais integrações vocês suportam?","acceptedAnswer":{"@type":"Answer","text":"Principais CRMs, ERPs e automações via API, webhooks, n8n/Make/Zapier."}},
         {"@type":"Question","name":"Como funciona a LGPD?","acceptedAnswer":{"@type":"Answer","text":"Governança de dados, consentimento e controle de retenção."}},
         {"@type":"Question","name":"Posso usar meu próprio provedor de IA?","acceptedAnswer":{"@type":"Answer","text":"Sim (OpenAI e alternativos)."}},
-        {"@type":"Question","name":"Tenho fluxos complexos, dá certo?","acceptedAnswer":{"@type":"Answer","text":"Mapeamos e modularizamos por etapas."}},
-        {"@type":"Question","name":"Qual é o prazo médio para entrega de sites?","acceptedAnswer":{"@type":"Answer","text":"Projetos simples em 1-2 semanas; sites institucionais em 2-3 semanas; e-commerce pode levar um pouco mais."}},
-        {"@type":"Question","name":"Vocês hospedam o site?","acceptedAnswer":{"@type":"Answer","text":"Podemos indicar provedores confiáveis e fazer a publicação por você."}},
-        {"@type":"Question","name":"Integram com WhatsApp, CRM, Pixel e GTM?","acceptedAnswer":{"@type":"Answer","text":"Sim, fazemos todas as integrações essenciais para tracking e conversão."}}
+        {"@type":"Question","name":"Tenho fluxos complexos, dá certo?","acceptedAnswer":{"@type":"Answer","text":"Mapeamos e modularizamos por etapas."}}
       ]
     };
 
     const services = {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "SouzAI | Agentes de IA e Criação de Sites",
+      name: "SouzAI | Agentes de IA Inteligentes",
       provider: {
         "@type": "Organization",
         name: "SouzAI"
       },
-      description: "Agentes de IA e desenvolvimento de sites para captar leads, vender mais e escalar atendimento",
-      serviceType: ["Agentes de IA", "Criação de Sites", "Landing Pages", "E-commerce"]
+      description: "Agentes de IA para captar leads, vender mais e escalar atendimento automatizado",
+      serviceType: ["Agentes de IA", "Automação de Atendimento", "Qualificação de Leads"]
     };
 
     const scriptOrg = document.createElement('script');
@@ -72,15 +67,15 @@ const Index = () => {
     document.head.appendChild(scriptServices);
 
     // Update document title and meta description
-    document.title = "SouzAI | Agentes de IA e Sites";
+    document.title = "SouzAI | Agentes de IA Inteligentes";
     
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'IA que vende e sites que convertem. Landing pages, sites institucionais e e-commerce, integrados a WhatsApp/CRM e métricas. Agende seu diagnóstico.');
+      metaDesc.setAttribute('content', 'Agentes de IA que atendem 24/7, qualificam leads e aumentam suas vendas. Integrados a WhatsApp, CRM e todos os seus canais. Agende seu diagnóstico.');
     } else {
       const newMetaDesc = document.createElement('meta');
       newMetaDesc.name = 'description';
-      newMetaDesc.content = 'IA que vende e sites que convertem. Landing pages, sites institucionais e e-commerce, integrados a WhatsApp/CRM e métricas. Agende seu diagnóstico.';
+      newMetaDesc.content = 'Agentes de IA que atendem 24/7, qualificam leads e aumentam suas vendas. Integrados a WhatsApp, CRM e todos os seus canais. Agende seu diagnóstico.';
       document.head.appendChild(newMetaDesc);
     }
 
@@ -103,16 +98,14 @@ const Index = () => {
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#beneficios" className="hover:text-primary transition-colors">Benefícios</a>
             <a href="#como-funciona" className="hover:text-primary transition-colors">Como funciona</a>
-            <a href="#criacao-sites" className="hover:text-primary transition-colors">Criação de Sites</a>
-            <a href="#portfolio" className="hover:text-primary transition-colors">Portfólio</a>
-            <a href="#planos" className="hover:text-primary transition-colors">Planos</a>
+            <a href="#casos" className="hover:text-primary transition-colors">Casos de uso</a>
             <a href="#depoimentos" className="hover:text-primary transition-colors">Depoimentos</a>
             <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
             <a href="#contato" className="hover:text-primary transition-colors">Contato</a>
           </nav>
           <div className="hidden md:block">
             <Button asChild variant="hero">
-              <a href="#contato">Agendar demo</a>
+              <a href="#contato">Agendar diagnóstico</a>
             </Button>
           </div>
         </div>
@@ -128,72 +121,31 @@ const Index = () => {
               <Shield className="w-4 h-4 text-primary" /> Conformidade com a LGPD
             </span>
             <h1 className="mt-5 text-4xl md:text-6xl font-bold leading-tight text-white">
-              <span>Agentes de IA + Sites de alta performance: gere leads e vendas 24/7</span>
+              <span>IA que vende por você — atendimento inteligente 24/7</span>
             </h1>
 
             <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto text-white">
-              A SouzAI implementa agentes de IA e desenvolve sites (landing pages, institucionais e lojas virtuais) para captar leads, vender mais e escalar seu atendimento, integrados aos seus canais, CRM e métricas.
+              A SouzAI implementa agentes de IA que captam leads, qualificam oportunidades e vendem mais — integrados ao WhatsApp, Instagram, site, CRM e todos os seus canais.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
               <div className="flex items-center gap-2">
                 <BrainCircuit className="w-4 h-4" />
-                <span>Agentes de IA escaláveis</span>
+                <span>Resposta imediata em qualquer canal</span>
               </div>
               <div className="flex items-center gap-2">
-                <AppWindow className="w-4 h-4" />
-                <span>Sites que convertem</span>
+                <Shield className="w-4 h-4" />
+                <span>Qualificação automática de leads</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <TrendingUp className="w-4 h-4" />
+                <span>Mais vendas, menos custo</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Service Toggle */}
-      <section className="container mx-auto px-6 py-8">
-        <div className="text-center mb-6">
-          <h2 className="font-heading text-3xl mb-4">
-            Conheça nossos serviços
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Navegue entre os nossos serviços e descubra como podemos ajudar a sua empresa a crescer.
-          </p>
-        </div>
-        <div className="flex justify-center">
-
-        <div className="flex bg-secondary rounded-xl p-1 shadow-xl shadow-black/15 dark:shadow-black/40 transition-shadow">
-          <button
-            onClick={() => setActiveTab("agentes")}
-            className={`px-6 py-3 rounded-md text-sm font-medium will-change-transform transition-[box-shadow,transform,background-color,color] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 active:translate-y-[1px] active:shadow-md ${
-              activeTab === "agentes"
-                ? "bg-primary text-primary-foreground shadow-2xl shadow-black/25 hover:-translate-y-0.5"
-                : "text-muted-foreground hover:text-foreground hover:bg-primary/5 hover:-translate-y-0.5"
-            }`}
-            aria-pressed={activeTab === "agentes"}
-          >
-            <Bot className="w-4 h-4 inline-block mr-2 drop-shadow" />
-            Agentes de IA
-          </button>
-
-          <button
-            onClick={() => setActiveTab("sites")}
-            className={`px-6 py-3 rounded-md text-sm font-medium will-change-transform transition-[box-shadow,transform,background-color,color] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 active:translate-y-[1px] active:shadow-md ${
-              activeTab === "sites"
-                ? "bg-primary text-primary-foreground shadow-2xl shadow-black/25 hover:-translate-y-0.5"
-                : "text-muted-foreground hover:text-foreground hover:bg-primary/5 hover:-translate-y-0.5"
-            }`}
-            aria-pressed={activeTab === "sites"}
-          >
-            <CodeXml className="w-4 h-4 inline-block mr-2 drop-shadow" />
-            Criação de Sites
-          </button>
-        </div>
-      </div>
-
-      </section>
-
-      {/* Conteúdo dos Agentes de IA */}
-      <div className={activeTab === "agentes" ? "block" : "hidden"}>
-        {/* Problema -> Solução */}
+      {/* Problema -> Solução */}
       <section id="beneficios" className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div>
@@ -413,289 +365,14 @@ const Index = () => {
           </Accordion>
         </div>
       </section>
-      </div>
-
-      {/* Conteúdo de Criação de Sites */}
-      <div className={activeTab === "sites" ? "block" : "hidden"}>
-        {/* Por que ter um site com a SouzAI */}
-        <section id="criacao-sites" className="container mx-auto px-6 py-16">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-3xl mb-6">Sites projetados para vender, não só para "estar no ar"</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Desenvolvemos sites que convertem visitantes em clientes, com arquitetura focada em performance e resultados.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              { icon: TrendingUp, title: "Arquitetura de conversão", desc: "UX + SEO técnico" },
-              { icon: Zap, title: "Velocidade e performance", desc: "Core Web Vitals otimizados" },
-              { icon: Globe, title: "Integração total", desc: "WhatsApp, CRM, Pixel, GTM" },
-              { icon: ShoppingCart, title: "E-commerce escalável", desc: "Checkout, frete, pagamentos" },
-              { icon: Palette, title: "Design alinhado", desc: "Posicionamento e identidade" }
-            ].map((benefit, idx) => (
-              <Card key={idx} className="shadow-soft hover:shadow-glow transition-all duration-300 group">
-                <CardContent className="p-6 text-center">
-                  <benefit.icon className="w-8 h-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-sm text-muted-foreground">{benefit.desc}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Como funciona: Websites em 4 etapas */}
-        <section className="bg-secondary/60 border-y">
-          <div className="container mx-auto px-6 py-16">
-            <h2 className="font-heading text-3xl text-center mb-10">Como funciona: Websites em 4 etapas</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              {[
-                { step: 1, title: "Briefing guiado", desc: "Objetivos, público, diferenciais e mapa de páginas", icon: Building },
-                { step: 2, title: "Protótipo e design", desc: "Layout responsivo, copy de conversão e aprovação rápida", icon: Palette },
-                { step: 3, title: "Desenvolvimento", desc: "Publicação + integrações (WhatsApp, CRM, Pixel, GTM, e-commerce)", icon: Code },
-                { step: 4, title: "Lançamento", desc: "Testes, métricas, ajustes e plano de evolução", icon: Rocket }
-              ].map((step) => (
-                <Card key={step.step} className="shadow-soft transform transition-transform duration-300 hover:scale-105">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
-                        {step.step}
-                      </div>
-                      <step.icon className="text-primary" />
-                    </div>
-                    <h3 className="font-heading text-xl mb-2">{step.title}</h3>
-                    <p className="text-muted-foreground text-sm">{step.desc}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Button asChild variant="hero" size="lg" className="transform transition-transform duration-300 hover:scale-105">
-                <a href="#contato">Quero meu site de alta conversão</a>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Portfólio/Mostruário */}
-        <section id="portfolio" className="container mx-auto px-6 py-16 select-none">
-          <h2 className="font-heading text-3xl text-center mb-10">Portfólio de sites que convertem</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {[
-            { sector: "Saúde", result: "PulseFit", image: "/./src/assets/pulsefit-print.png" },
-            { sector: "Fintech", result: "Zyra", image: "././src/assets/zyra-print.png" },
-            { sector: "Tecnologia", result: "CodeUp Academy", image: "././src/assets/codeup-print.png" },
-            { sector: "Tecnologia", result: "ZapEats", image: "././src/assets/zapeats-print.png" },
-            { sector: "Fintech", result: "MoneyMind Academy", image: "././src/assets/moneymind-print.png" },
-            { sector: "Tecnologia", result: "TaskPro", image: "././src/assets/taskpro-print.png" }
-            
-            
-          ].map((project, idx) => (
-            <Card key={idx} className="shadow-soft hover:shadow-glow transition-all duration-300 group overflow-hidden">
-              <div className="aspect-video bg-gradient-primary/20 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent">
-                  <img src={project.image} alt={project.sector} className="object-cover w-full h-full" />
-                </div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <div className="bg-black/50 backdrop-blur px-3 py-1 rounded-full text-sm">
-                    {project.sector}
-                  </div>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-semibold text-primary">{project.result}</p>
-                    <p className="text-sm text-muted-foreground">Confira o projeto com mais detalhes</p>
-                  </div>
-                  <Button variant="ghost" size="sm" className="group-hover:text-primary">
-                    <ExternalLink className="w-4 h-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        <div className="text-center space-x-4">
-          <Button variant="outline" size="lg">
-            Ver portfólio completo
-          </Button>
-          <Button variant="hero" size="lg">
-            Solicitar análise do meu caso
-          </Button>
-        </div>
-      </section>
-
-
-        {/* Planos & Preços */}
-        <section id="planos" className="bg-secondary/60 border-y">
-          <div className="container mx-auto px-6 py-16">
-            <h2 className="font-heading text-3xl text-center mb-10">Planos & Preços - Criação de Sites</h2>
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {[
-                {
-                  name: "LANDING START",
-                  subtitle: "Para campanhas e validação",
-                  features: [
-                    "1 página (seções modulares)",
-                    "Copy de conversão + 1 formulário",
-                    "Integração WhatsApp/CRM + Pixel/GTM",
-                    "Publicação + otimização inicial"
-                  ],
-                  cta: "Orçar minha landing",
-                  popular: false
-                },
-                {
-                  name: "INSTITUCIONAL PRO",
-                  subtitle: "Autoridade e captação",
-                  features: [
-                    "Até 6 páginas (Home, Sobre, Serviços, etc.)",
-                    "Blog pronto + SEO técnico base",
-                    "Integrações (WhatsApp, CRM, newsletter)",
-                    "Migração de conteúdo essencial"
-                  ],
-                  cta: "Quero meu site institucional",
-                  popular: true
-                },
-                {
-                  name: "LOJA VIRTUAL",
-                  subtitle: "Venda online",
-                  features: [
-                    "Catálogo + carrinho + checkout",
-                    "Pagamentos (Pix, cartão) e frete",
-                    "Abandono de carrinho + Pixel/GTM",
-                    "Integrações (ERP/Hub, quando aplicável)"
-                  ],
-                  cta: "Orçar minha loja virtual",
-                  popular: false
-                }
-              ].map((plan) => (
-                <Card key={plan.name} className={`shadow-soft hover:shadow-glow transition-all duration-300 ${plan.popular ? 'ring-2 ring-primary scale-105' : ''}`}>
-                  <CardContent className="p-6">
-                    {plan.popular && (
-                      <div className="text-center mb-4">
-                        <span className="bg-primary text-primary-foreground text-xs px-3 py-1 rounded-full">
-                          Mais Popular
-                        </span>
-                      </div>
-                    )}
-                    <div className="text-center mb-6">
-                      <h3 className="font-heading text-xl mb-2">{plan.name}</h3>
-                      <p className="text-muted-foreground text-sm">{plan.subtitle}</p>
-                      <div className="mt-4">
-                        <span className="text-2xl font-bold">Sob consulta</span>
-                      </div>
-                    </div>
-                    <ul className="space-y-3 mb-6">
-                      {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm">
-                          <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full" variant={plan.popular ? "hero" : "outline"}>
-                      <a href="#contato">{plan.cta}</a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <p className="text-center text-sm text-muted-foreground">
-              Prazo típico: dias, não meses. Escopo exato e integrações podem variar conforme necessidade.
-            </p>
-          </div>
-        </section>
-
-        {/* Combos: Site + Agente de IA */}
-        <section className="container mx-auto px-6 py-16">
-          <h2 className="font-heading text-3xl text-center mb-4">Combos: Site + Agente de IA</h2>
-          <p className="text-xl text-muted-foreground text-center mb-10 max-w-3xl mx-auto">
-            Maximize seus resultados combinando um site de alta conversão com agentes de IA inteligentes.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {[
-              {
-                title: "Landing + Agente de Qualificação",
-                desc: "Capta, qualifica e agenda automaticamente",
-                features: ["Landing page otimizada", "Chatbot de qualificação", "Integração CRM", "Follow-up automático"],
-                icon: TrendingUp
-              },
-              {
-                title: "Institucional + Suporte 24/7",
-                desc: "FAQ, status de pedidos e NPS automatizado",
-                features: ["Site institucional completo", "Agente de suporte", "Base de conhecimento", "Pesquisas NPS"],
-                icon: Bot
-              },
-              {
-                title: "E-commerce + Recuperação de Carrinho",
-                desc: "Follow-ups automáticos para carrinhos abandonados",
-                features: ["Loja virtual completa", "Agente de vendas", "Recuperação de carrinho", "Cross-sell/upsell"],
-                icon: ShoppingCart
-              }
-            ].map((combo, idx) => (
-              <Card key={idx} className="shadow-soft hover:shadow-glow transition-all duration-300 group">
-                <CardContent className="p-6">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                      <combo.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="font-heading text-xl mb-2">{combo.title}</h3>
-                    <p className="text-muted-foreground text-sm">{combo.desc}</p>
-                  </div>
-                  <ul className="space-y-2 mb-6">
-                    {combo.features.map((feature, featureIdx) => (
-                      <li key={featureIdx} className="flex items-center gap-2 text-sm">
-                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button asChild variant="outline" className="w-full">
-                    <a href="#contato">Ver detalhes</a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center">
-            <Button asChild variant="hero" size="lg" className="transform transition-transform duration-300 hover:scale-105">
-              <a href="#contato">Quero um combo para acelerar resultados</a>
-            </Button>
-          </div>
-        </section>
-
-        {/* FAQ - Websites */}
-        <section className="bg-secondary/60 border-y">
-          <div className="container mx-auto px-6 py-16">
-            <h2 className="font-heading text-3xl text-center mb-10">FAQ - Criação de Sites</h2>
-            <Accordion type="single" collapsible className="max-w-3xl mx-auto">
-              {[
-                {q:"Qual é o prazo médio para entrega?", a:"Projetos simples (landing pages) em 1-2 semanas; sites institucionais em 2-3 semanas; e-commerce pode levar um pouco mais, dependendo da complexidade."},
-                {q:"Vocês hospedam o site?", a:"Podemos indicar provedores confiáveis e fazer a publicação por você, garantindo performance e segurança."},
-                {q:"Já tenho domínio .com.br e e-mail profissional, dá para usar?", a:"Sim, utilizamos sua infraestrutura existente e fazemos as configurações necessárias."},
-                {q:"Integram com WhatsApp, CRM, Pixel e GTM?", a:"Sim, fazemos todas as integrações essenciais para tracking e conversão."},
-                {q:"E-commerce: quais pagamentos e fretes vocês suportam?", a:"Pix, cartão de crédito, boleto; cálculo de frete via Correios e transportadoras através de integrações compatíveis."},
-                {q:"Vocês criam o conteúdo (texto/imagens)?", a:"Podemos apoiar com copywriting focado em conversão e diretrizes para fotos/imagens."},
-                {q:"Suporte e manutenção depois do lançamento?", a:"Oferecemos planos de manutenção sob medida para atualizações e melhorias contínuas."}
-              ].map((f, idx) => (
-                <AccordionItem key={f.q} value={`site-item-${idx}`}>
-                  <AccordionTrigger>{f.q}</AccordionTrigger>
-                  <AccordionContent>{f.a}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </section>
-      </div>
 
       {/* Contato */}
       <section id="contato" className="bg-secondary/60 border-y">
         <div className="container mx-auto px-6 py-16">
           {/* Informações de contato */}
           <div className="max-w-4xl mx-auto mt-16">
-            <h2 className="font-heading text-3xl text-center mb-4">Pronto para um site que converte com IA trabalhando por você?</h2>
-            <p className="text-muted-foreground text-center mb-10">Receba um diagnóstico gratuito e um plano claro para seu funil e sua presença digital.</p>
+            <h2 className="font-heading text-3xl text-center mb-4">Pronto para escalar com Agentes de IA?</h2>
+            <p className="text-muted-foreground text-center mb-10">Receba um diagnóstico gratuito e um plano claro para automatizar seu atendimento e vender mais.</p>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
