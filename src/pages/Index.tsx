@@ -121,7 +121,7 @@ const Index = () => {
               <Shield className="w-4 h-4 text-primary" /> Conformidade com a LGPD
             </span>
             <h1 className="mt-5 text-4xl md:text-6xl font-bold leading-tight text-white">
-              <span>IA que vende por você — atendimento inteligente 24/7</span>
+              <span>IA que vende por você Atendimento inteligente 24/7</span>
             </h1>
 
             <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto text-white">
